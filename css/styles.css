@@ -1,0 +1,78 @@
+:root {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+@font-face {
+	font-family: 'PT Sans', sans-serif;
+	src: url('../fonts/ptsans.woff2') format('woff2'),
+		url('../fonts/ptsans.woff') format('woff');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'PT Sans', sans-serif;
+	src: url('../fonts/ptsansbold.woff2') format('woff2'),
+		url('../fonts/ptsansbold.woff') format('woff');
+	font-style: normal;
+	font-weight: 700;
+}
+
+body {
+	width: 1200px;
+
+	padding: 0;
+	margin: 0;
+
+	font-family: 'PT Sans', 'Arial', sans-serif;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+.main-header {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.main-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.site-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	padding: 0 72px;
+
+	list-style: none;
+
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 700;
+}
+
+.site-nav a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.nav-logo__container {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 531px;
+}
