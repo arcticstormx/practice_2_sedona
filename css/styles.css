@@ -29,6 +29,8 @@ body {
 	margin: 0;
 
 	font-family: 'PT Sans', 'Arial', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
 }
 
 .visually-hidden {
@@ -128,3 +130,62 @@ body {
 	font-weight: 400;
 }
 
+/* начало классов футера */
+
+.main-footer {
+	display: flex;
+	align-items: center;
+}
+
+.social-links {
+	display: flex;
+	list-style: none;
+
+	margin: 0;
+	padding: 0;
+}
+
+.social-links__link {
+	display: flex;
+	margin-right: 6px;
+	width: 46px;
+	height: 48px;
+
+	text-decoration: none;
+}
+
+.social-links::last-child {
+	margin: 0;
+}
+
+.social-links__link--twitter {
+	background-image: url("../img/t-icon.png");
+	background-repeat: no-repeat;
+}
+
+.social-links__link--fb {
+	background-image: url("../img/fb-icon.png");
+	background-repeat: no-repeat;
+}
+
+.social-links__link--youtube {
+	background-image: url("../img/youtube-icon.png");
+	background-repeat: no-repeat;
+}
+
+.academy-logo {
+	position: relative;
+}
+
+.academy-logo__content::after {
+	position: absolute;
+	width: 115px;
+	height: 41px;
+	
+	top: -14px;
+	left: 94px;
+
+	content: "";
+	background-image: url("../img/logo_name.png");
+	background-repeat: none;
+}
