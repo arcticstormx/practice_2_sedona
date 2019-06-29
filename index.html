@@ -44,7 +44,7 @@
 
             <div class="sedona-summary__pic-block">
 				<div class="sedona-feature">
-					<h3 class="bold-text">Настоящий городок</h3>
+					<h3 class="bold-text">Настоящий</br>городок</h3>
 					<span class="small-text">— №1 —</span>
 					<p class="small-text">
 					   СЕДОНА — НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ,</br> ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
@@ -54,35 +54,38 @@
             </div>
 			
 			<ul class="utilities-list">
-				<li class="sedona-utility">
-					<h3 class="bold-text">Жилье</h3>
+				<li class="utilities-list__item">
+					<h3 class="bold-text utilities-list__home">Жилье</h3>
 					<p class="small-text">
 						Рекомендуем пожить в настоящем мотеле, все как в кино!
 					</p>
 				</li>
-				<li class="sedona-utility">
-					<h3 class="bold-text">Еда</h3>
+				<li class="utilities-list__item">
+					<h3 class="bold-text utilities-list__food">Еда</h3>
 					<p class="small-text">
 						Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
 					</p>
 				</li>
-				<li class="sedona-utility">
-					<h3 class="bold-text">Сувениры</h3>
+				<li class="utilities-list__item">
+					<h3 class="bold-text utilities-list__souvenir">Сувениры</h3>
 					<p class="small-text">
 						Не только китайского, но и местного производства!
 					</p>
 				</li>
 			</ul>
 
-            
-           <div> 
-                <div class="main-sedona-pic2"></div>
-                <div class="sedona-summary__feature sedona-feature">
-                   <h2>ТАМ ЕСТЬ Мост дьявола</h2>
-                   <span>— №2 —</span>
-                   <small>Да, по нему можно пройти! Если конечно вы осмелитесь</small>
-               </div>
-           </div>
+            <div class="sedona-summary__pic-block sedona-summary__pic-block--second">
+				<div class="sedona-feature sedona-feature--2">
+					<h3 class="bold-text">
+                        ТАМ ЕСТЬ</br>Мост дьявола
+                    </h3>
+					<span class="small-text">— №2 —</span>
+					<p class="small-text">
+					   Да, по нему можно пройти! Если конечно вы осмелитесь
+					</p>
+				</div>
+                <div class="sedona-pic2"></div>
+            </div>
 
 			<ol class="features-list">
 				<li class="sedona-summary__feature sedona-feature sedona-feature--grey">
@@ -104,24 +107,21 @@
 		</section>
 
 		<section class="contacts">
-			<div>
-				<p>ЗАИНТЕРЕСОВАЛИСЬ?</p>
-				<small>
-					Укажите предполагаемые даты поездки, 
+			<div class="contacts__container">
+				<p class="contacts__header extra-bold">ЗАИНТЕРЕСОВАЛИСЬ?</p>
+				<p class="small-text contacts__text">
+					Укажите предполагаемые даты поездки,</br>
 					и мы покажем вам лучшие предложения гостиниц в седоне
-				</small>
+				</p>
+                <button class="search-btn">Поиск гостиницы в Седоне</button>
 			</div>
-			<div>
-				<img src="" alt="">
-			</div>
+            <div class="map-item"></div>
 		</section>
 	</main>
 
 	<footer class="main-footer">
 
-		<div>
-			<span class="bold-text">#VISITSEDONA</span>
-		</div>
+		<span class="bold-text hashtag">#VISITSEDONA</span>
 
 		<ul class="social-links">
 			<li>
@@ -144,9 +144,7 @@
 			</li>
 		</ul>
 
-		<div class="academy-logo">
-			<span class="academy-logo__content">WEBSITE BY</span>
-		</div>
+		<div class="academy-logo">WEBSITE BY</div>
 	</footer>
 
 	<section class="modal">
