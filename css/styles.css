@@ -41,6 +41,21 @@ body {
 	margin: -1px;
 }
 
+.bold-text {
+    line-height: 31px;
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.small-text {
+    line-height: 14px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/*классы хэдера*/
+
 .main-header {
 	display: flex;
 	flex-direction: column;
@@ -91,6 +106,8 @@ body {
 	left: 531px;
 }
 
+/*классы секции main*/
+
 .index-main {
 	text-transform: uppercase;
 	font-weight: 400;
@@ -105,31 +122,59 @@ body {
 	height: 100%;
 }
 
-.sedona-summary__header {
+.sedona-summary__intro-text {
+    margin: 0;
+    padding: 0;
+}
+
+.sedona-summary__intro-text p {
 	margin: 0;
 	margin-bottom: 35px;
 	text-align: center;
 }
 
-.sedona-summary__small {
+.sedona-summary__intro-text small {
 	display: block;
 	margin-bottom: 59px;
 	text-align: center;
 }
 
-.bold-text {
-	line-height: 31px;
-	font-size: 21px;
-	font-weight: 700;
-	text-transform: uppercase;
+.sedona-summary-pic-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.small-text {
-	line-height: 14px;
-	font-size: 14px;
-	font-weight: 400;
+.sedona-feature {
+    max-width: 400px;
+
+    padding-top: 45px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    text-align: center;
+
+    color: #ffffff;
+    background-color: #81b3d2;
 }
 
+.sedona-feature h3 {
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.sedona-feature p {
+    margin: 0;
+    margin-top: 30px;
+}
+
+.sedona-pic1 {
+    background-image: url(../img/pic1.jpg);
+    background-repeat: no-repeat;
+    width: 700px;
+    height: 300px;
+}
 /* начало классов футера */
 
 .main-footer {
@@ -189,3 +234,10 @@ body {
 	background-image: url("../img/logo_name.png");
 	background-repeat: none;
 }
+
+
+ /*модалка*/
+
+ .modal { 
+ 	display: none;
+ }
