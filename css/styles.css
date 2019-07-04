@@ -68,6 +68,8 @@ body {
 	
 	padding-top: 22px;
 	padding-bottom: 24px;
+
+    text-transform: uppercase;
 }
 
 .main-nav {
@@ -112,7 +114,7 @@ body {
 	left: 531px;
 }
 
-/*классы секции main*/
+/*классы страницы index*/
 
 .index-main {
 	text-transform: uppercase;
@@ -330,6 +332,65 @@ body {
     background-image: url("../img/map.jpg");
     background-repeat: no-repeat;
 }
+
+/* начало классов страницы hotels*/
+
+.hotels-main {
+    text-transform: uppercase;
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+
+    padding-right: 73px;
+    padding-left: 73px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    height: 270px;
+
+    background-color: lightgray;
+}
+
+.filters form {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.filters fieldset {
+    display: flex;
+    border: none;
+}
+
+.filters legend {
+    margin-bottom: 28px;
+}
+
+.filters label {
+    padding-left: 40px;
+}
+
+.filters input {
+    display: none;
+}
+
+
+.filters .filters__container {
+    display: flex;
+}
+
+.filters__utilities {
+    display: flex;
+    flex-direction: column;
+}
+
+.filters__apartments {
+    display: flex;
+    flex-direction: column;
+}
+
 /* начало классов футера */
 
 .main-footer {
@@ -409,6 +470,8 @@ body {
 	background-image: url("../img/logo_name.png");
 	background-repeat: none;
 }
+
+
 
 
  /*модалка*/
