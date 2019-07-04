@@ -11,7 +11,7 @@
 	<heade r class="main-header">
 		<nav class="main-nav">
 			<ul class="site-nav">
-				<li><a href="index.html">Информация</a></li>
+				<li><a href="index.html active">Информация</a></li>
 				<li><a href="">Фото и видео</a></li>
 			</ul>
 			<div class="nav-logo__container">
@@ -19,18 +19,117 @@
 			</div>
 			<ul class="site-nav">
 				<li><a href="">Карта штата</a></li>
-				<li><a href="">Гостиницы</a></li>
+				<li><a href="hotels.html active">Гостиницы</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<main>
 		<section class="filters">
+			<form action="#" method="get">
+				<fieldset>
+					<legend>Инфраструктура</legend>
+					<label for="filter-pool">Бассейн</label>
+                    <input type="checkbox" id="filter-pool" name="utilities" value="swimming_pool">
+
+                    <label for="filter-parking">Парковка</label>
+                    <input type="checkbox" id="filter-parking" name="utilities" value="parking">
+
+                    <label for="filter-wifi">Wi-Fi</label>
+                    <input type="checkbox" id="filter-wifi" name="utilities" value="wifi">
+				</fieldset>
+                <fieldset>
+                    <legend>Тип жилья</legend>
+                    <label for="filter-hotel">Гостиница</label>
+                    <input type="checkbox" id="filter-hotel" name="apartments[]" value="hotel">
+
+                    <label for="filter-motel">Мотель</label>
+                    <input type="checkbox" id="filter-motel" name="apartments[]" value="motel">
+
+                    <label for="filter-apartments">Апартаменты</label>
+                    <input type="checkbox" id="filter-apartments" name="apartments[]" value="apartments">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Стоимость в сутки (Р):</legend>
+                    <div>
+                        <input type="text" placeholder="ОТ 0">
+                        <input type="text" placeholder="ДО 3000">
+                    </div>
+                    <div>
+                        <input type="range" class="slider">
+                    </div>
+                    <button type="submit">Показать</button>
+                </fieldset>
+			</form>
 			
 		</section>
 
-		<section class="hotels-list">
-			
+		<section class="hotels">
+			<div class="sorting">
+                <span class="sorting__result">Найдено: <span class="sorting__result-number">3</span></span>
+                <span class="">Сортировка:<span>
+                <ul class="sorting__options">
+                    <li class="sorting__option">По цене</li>
+                    <li class="sorting__option">По типу</li>
+                    <li class="sorting__option">По рейтингу</li>
+                </ul>
+                <span class="sorting__arrows"></span>
+            </div>
+
+            <ul class="hotels-list">
+                <li class="hotels-list__item hotel">
+                    <div class="hotel__description">
+                        <div class="hotel__img-container">
+                            <img class="hotel__img" src="" alt="">
+                        </div>
+                        <h3 class="hotel__name"></h3>
+                        <div>
+                            <span class="hotel__type">Гостиница</span>
+                            <a href="#">Подробнее</a>
+                        </div>
+                            <div>
+                                <span class="hotel__price">ОТ</span>
+                                <a href="">Забронировать</a>
+                            </div>
+                    </div>
+
+                </li>
+                <li class="hotels-list__item hotel">
+                    <div class="hotel__description">
+                        <div class="hotel__img-container">
+                            <img class="hotel__img" src="" alt="">
+                        </div>
+                        <h3 class="hotel__name"></h3>
+                        <div>
+                            <span class="hotel__type"></span>
+                            <a href="#">Подробнее</a>
+                        </div>
+                            <div>
+                                <span class="hotel__price">ОТ</span>
+                                <a href="">Забронировать</a>
+                            </div>
+                    </div>
+
+                </li>
+                <li class="hotels-list__item hotel">
+                    <div class="hotel__description">
+                        <div class="hotel__img-container">
+                            <img class="hotel__img" src="" alt="">
+                        </div>
+                        <h3 class="hotel__name"></h3>
+                        <div>
+                            <span class="hotel__type"></span>
+                            <a href="#">Подробнее</a>
+                        </div>
+                            <div>
+                                <span class="hotel__price">ОТ</span>
+                                <a href="">Забронировать</a>
+                            </div>
+                    </div>
+
+                </li>
+            </ul>
 		</section>
 
 	</main>
