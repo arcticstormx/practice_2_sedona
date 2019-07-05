@@ -342,7 +342,8 @@ body {
 .filters {
     display: flex;
     flex-direction: row;
-
+    
+    margin-bottom: 30px;
     padding-right: 73px;
     padding-left: 73px;
     padding-top: 30px;
@@ -365,11 +366,19 @@ body {
 }
 
 .filters legend {
-    margin-bottom: 28px;
+    margin-bottom: 35px;
+
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .filters label {
+    margin-bottom: 35px;
     padding-left: 40px;
+
+    font-size: 14px;
+    line-height: 14px;
+    cursor: pointer;
 }
 
 .filters input {
@@ -382,13 +391,51 @@ body {
 }
 
 .filters__utilities {
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
 }
 
 .filters__apartments {
+    margin-left: 112px;
+    padding: 0;
     display: flex;
     flex-direction: column;
+}
+
+.filters__price {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.hotels {
+    display: flex;
+    flex-direction: column;
+}
+
+.sorting {
+    display: flex;
+    flex-direction: row;
+}
+
+.sorting h3 {
+    margin: 0;
+}
+
+.sorting__result {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.sorting__options {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
 }
 
 /* начало классов футера */

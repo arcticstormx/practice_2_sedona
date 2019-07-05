@@ -8,21 +8,21 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<heade r class="main-header">
-		<nav class="main-nav">
-			<ul class="site-nav">
-				<li><a href="index.html active">Информация</a></li>
-				<li><a href="#">Фото и видео</a></li>
-			</ul>
-			<div class="nav-logo__container">
-				<img class="nav-logo" src="img/logo.png" alt="">
-			</div>
-			<ul class="site-nav">
-				<li><a href="#">Карта штата</a></li>
-				<li><a href="hotels.html active">Гостиницы</a></li>
-			</ul>
-		</nav>
-	</header>
+	<header class="main-header">
+        <nav class="main-nav">
+            <ul class="site-nav">
+                <li><a href="index.html">Информация</a></li>
+                <li><a href="#">Фото и видео</a></li>
+            </ul>
+            <div class="nav-logo__container">
+                <img class="nav-logo" src="img/logo.png" alt="">
+            </div>
+            <ul class="site-nav">
+                <li><a href="#">Карта штата</a></li>
+                <li><a href="hotels.html" class="active">Гостиницы</a></li>
+            </ul>
+        </nav>
+    </header>
 
 	<main class="hotels-main">
 		<section class="filters">
@@ -63,19 +63,20 @@
                     </div>
                     <button type="submit">Показать</button>
                 </fieldset>
-			</form>
-			
+			</form>			
 		</section>
 
 		<section class="hotels">
 			<div class="sorting">
-                <span class="sorting__result">Найдено: <span class="sorting__result-number">3</span></span>
-                <span class="">Сортировка:<span>
-                <ul class="sorting__options">
-                    <li class="sorting__option">По цене</li>
-                    <li class="sorting__option">По типу</li>
-                    <li class="sorting__option">По рейтингу</li>
-                </ul>
+                <span class="sorting__result">Найдено: 3</span>
+
+                <h3>Сортировка:</h3>
+                <div class="sorting__options">
+                    <a href="#" class="sorting__option sorting__option--active">По цене</a>
+                    <a href="#" class="sorting__option">По типу</a>
+                    <a href="#" class="sorting__option">По рейтингу</a>
+                </div>
+                
                 <div class="sorting__arrows">
                     <span class="arrow-up"></span>
                     <span class="arrow-down"></span>
@@ -124,10 +125,11 @@
                         </div>
                     </div>
                     <div class="hotel__rating">
-                        <p class="hotel__stars"><span></span>
+                        <div class="hotel__stars"><span></span>
                         <span></span>
-                        <span></span></p>
-                        <p class="hotel__rating-score"></p>
+                        <span></span>
+                        </div>
+                        <div class="hotel__rating-score"></div>
                     </div>
                 </li>
                 <li class="hotels-list__item hotel">
@@ -146,11 +148,11 @@
                         </div>
                     </div>
                     <div class="hotel__rating">
-                        <p class="hotel__stars">
+                        <div class="hotel__stars">
                             <span></span>
                             <span></span>
-                        </p>
-                        <p class="hotel__rating-score"></p>
+                        </div>
+                        <div class="hotel__rating-score"></div>
                     </div>
                 </li>
             </ul>
