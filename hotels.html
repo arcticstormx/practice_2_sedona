@@ -2,13 +2,14 @@
 <html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Отели</title>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <title>Отели</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-	<header class="wrapper main-header">
+    <header class="wrapper main-header">
         <nav class="main-nav">
             <ul class="site-nav">
                 <li><a href="index.html">Информация</a></li>
@@ -23,32 +24,26 @@
             </ul>
         </nav>
     </header>
-
-	<main class="hotels-main">
-		<section class="wrapper filters">
+    <main class="hotels-main">
+        <section class="wrapper filters">
             <h3 class="visually-hidden">Фильтр для поиска отеля</h3>
-			<form action="#" method="get">
+            <form action="#" method="get">
                 <div class="filters__container">
-    				<fieldset class="filters__utilities">
-    					<legend>Инфраструктура:</legend>
-
-    					<label for="filter-pool">Бассейн</label>
+                    <fieldset class="filters__utilities">
+                        <legend>Инфраструктура:</legend>
+                        <label for="filter-pool">Бассейн</label>
                         <input type="checkbox" id="filter-pool" name="utilities" value="swimming_pool">
-
                         <label for="filter-parking">Парковка</label>
                         <input type="checkbox" id="filter-parking" name="utilities" value="parking">
-
                         <label for="filter-wifi">Wi-Fi</label>
                         <input type="checkbox" id="filter-wifi" name="utilities" value="wifi">
-    				</fieldset>
+                    </fieldset>
                     <fieldset class="filters__apartments">
                         <legend>Тип жилья:</legend>
                         <label for="filter-hotel">Гостиница</label>
                         <input type="checkbox" id="filter-hotel" name="apartments[]" value="hotel">
-
                         <label for="filter-motel">Мотель</label>
                         <input type="checkbox" id="filter-motel" name="apartments[]" value="motel">
-
                         <label for="filter-apartments">Апартаменты</label>
                         <input type="checkbox" id="filter-apartments" name="apartments[]" value="apartments">
                     </fieldset>
@@ -64,26 +59,22 @@
                     </div>
                     <button type="submit">Показать</button>
                 </fieldset>
-			</form>			
-		</section>
-
-		<section class="hotels">
-			<div class="wrapper sorting">
+            </form>
+        </section>
+        <section class="hotels">
+            <div class="wrapper sorting">
                 <span class="bold-text sorting__result">Найдено: 3</span>
-
                 <h3>Сортировка:</h3>
                 <div class="sorting__options">
                     <a href="#" class="sorting__option sorting__option--active">По цене</a>
                     <a href="#" class="sorting__option">По типу</a>
                     <a href="#" class="sorting__option">По рейтингу</a>
                 </div>
-                
                 <div class="sorting__arrows">
                     <span class="arrow-up"></span>
                     <span class="arrow-down"></span>
                 </div>
             </div>
-
             <ul class="hotels-list">
                 <li class="wrapper hotels-list__item hotel">
                     <div class="hotel__description">
@@ -92,35 +83,82 @@
                         </div>
                         <div class="hotel__desc-container">
                             <h3 class="bold-text hotel__name">Amara Resort & SPA</h3>
-                            <div>
+                            <div class="hotel__type-container">
                                 <span class="hotel__type">Гостиница</span>
                                 <span class="hotel__price">ОТ 4000 Р.</span>
                             </div>
-                            <div>
+                            <div class="hotel__btn-container">
                                 <a class="hotel-btn-about" href="#">Подробнее</a>
                                 <a class="hotel-btn-book" href="#">Забронировать</a>
                             </div>
                         </div>
                     </div>
-                    <div class="hotel__rating">
+                    <div class="hotel__rating-container">
                         <div class="hotel__stars">
                             <span></span>
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
-                        <div class="hotel__rating-score"></div>
+                        <div class="small-text hotel__rating-score">Рейтинг: 8,5</div>
                     </div>
                 </li>
-                
+                <li class="wrapper hotels-list__item hotel">
+                    <div class="hotel__description">
+                        <div class="hotel__img-container">
+                            <img class="hotel__img" src="img/hotel-desert.jpg" alt="Фото Amara Resort & SPA" width="135" height="90">
+                        </div>
+                        <div class="hotel__desc-container">
+                            <h3 class="bold-text hotel__name">Desert Quail Inn</h3>
+                            <div class="hotel__type-container">
+                                <span class="hotel__type">Мотель</span>
+                                <span class="hotel__price">ОТ 3000 Р.</span>
+                            </div>
+                            <div class="hotel__btn-container">
+                                <a class="hotel-btn-about" href="#">Подробнее</a>
+                                <a class="hotel-btn-book" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hotel__rating-container">
+                        <div class="hotel__stars">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="small-text hotel__rating-score">Рейтинг: 8,9</div>
+                    </div>
+                </li>
+                <li class="wrapper hotels-list__item hotel">
+                    <div class="hotel__description">
+                        <div class="hotel__img-container">
+                            <img class="hotel__img" src="img/hotel-amara.jpg" alt="Фото Amara Resort & SPA" width="135" height="90">
+                        </div>
+                        <div class="hotel__desc-container">
+                            <h3 class="bold-text hotel__name">Villas at Poco Diablo</h3>
+                            <div class="hotel__type-container">
+                                <span class="hotel__type">Апартаменты</span>
+                                <span class="hotel__price">ОТ 2000 Р.</span>
+                            </div>
+                            <div class="hotel__btn-container">
+                                <a class="hotel-btn-about" href="#">Подробнее</a>
+                                <a class="hotel-btn-book" href="#">Забронировать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hotel__rating-container">
+                        <div class="hotel__stars">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="small-text hotel__rating-score">Рейтинг: 9,2</div>
+                    </div>
+                </li>
             </ul>
-		</section>
-
-	</main>
-	<footer class="main-footer">
-
+        </section>
+    </main>
+    <footer class="main-footer">
         <span class="bold-text hashtag">#VISITSEDONA</span>
-
         <ul class="social-links">
             <li>
                 <a class="social-links__link social-links__link--twitter" href="#">
@@ -138,8 +176,8 @@
                 </a>
             </li>
         </ul>
-
         <div class="academy-logo">WEBSITE BY</div>
     </footer>
 </body>
+
 </html>
