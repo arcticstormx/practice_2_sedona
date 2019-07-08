@@ -31,21 +31,21 @@
                 <div class="filters__container">
                     <fieldset class="filters__utilities">
                         <legend>Инфраструктура:</legend>
+                        <input type="checkbox" class="visually-hidden" id="filter-pool" name="utilities" value="swimming_pool">
                         <label for="filter-pool">Бассейн</label>
-                        <input type="checkbox" id="filter-pool" name="utilities" value="swimming_pool">
+                        <input type="checkbox" class="visually-hidden" id="filter-parking" name="utilities" value="parking">
                         <label for="filter-parking">Парковка</label>
-                        <input type="checkbox" id="filter-parking" name="utilities" value="parking">
+                        <input type="checkbox" class="visually-hidden" id="filter-wifi" name="utilities" value="wifi">
                         <label for="filter-wifi">Wi-Fi</label>
-                        <input type="checkbox" id="filter-wifi" name="utilities" value="wifi">
                     </fieldset>
                     <fieldset class="filters__apartments">
                         <legend>Тип жилья:</legend>
+                        <input type="checkbox" class="visually-hidden" id="filter-hotel" name="apartments[]" value="hotel">
                         <label for="filter-hotel">Гостиница</label>
-                        <input type="checkbox" id="filter-hotel" name="apartments[]" value="hotel">
+                        <input type="checkbox" class="visually-hidden" id="filter-motel" name="apartments[]" value="motel">
                         <label for="filter-motel">Мотель</label>
-                        <input type="checkbox" id="filter-motel" name="apartments[]" value="motel">
+                        <input type="checkbox" class="visually-hidden" id="filter-apartments" name="apartments[]" value="apartments">
                         <label for="filter-apartments">Апартаменты</label>
-                        <input type="checkbox" id="filter-apartments" name="apartments[]" value="apartments">
                     </fieldset>
                 </div>
                 <fieldset class="filters__price">
