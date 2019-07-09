@@ -378,14 +378,16 @@ body {
 }
 
 .filters legend {
-    margin-bottom: 35px;
+    margin-bottom: 27px;
 
     font-size: 16px;
     font-weight: 700;
 }
 
 .filters label {
-    margin-bottom: 35px;
+    margin-bottom: 23px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 40px;
 
     position: relative;
@@ -395,13 +397,38 @@ body {
     cursor: pointer;
 }
 
-.filters label::before {
+.filters label:last-of-type {
+    margin: 0;
+}
+
+.filters input[type="checkbox"]:not(:checked) + label::before {
     position: absolute;
 
-    width: 10px;
-    height: 10px;
+    left: 0;
+    top: 0;
+
+    width: 23px;
+    height: 23px;
 
     content: "";
+
+    background-image: url("../img/checkbox-off.png");
+    background-repeat: no-repeat;
+}
+
+.filters input[type="checkbox"]:checked + label::before {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 27px;
+    height: 23px;
+
+    content: "";
+
+    background-image: url("../img/checkbox-on.png");
+    background-repeat: no-repeat;
 }
 
 .filters input {
