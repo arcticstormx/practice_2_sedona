@@ -11,16 +11,15 @@
 <body>
     <header class="wrapper main-header">
         <nav class="main-nav">
-            <ul class="site-nav">
+            <ul class="site-nav site-nav-firsthalf">
                 <li><a href="index.html">Информация</a></li>
                 <li><a href="#">Фото и видео</a></li>
             </ul>
             <div class="nav-logo__container">
-                <img class="nav-logo" src="img/logo.png" alt="">
             </div>
-            <ul class="site-nav">
+            <ul class="site-nav site-nav-secondhalf">
                 <li><a href="#">Карта штата</a></li>
-                <li><a href="hotels.html" class="active">Гостиницы</a></li>
+                <li><a href="hotels.html" class="active-page">Гостиницы</a></li>
             </ul>
         </nav>
     </header>
@@ -48,16 +47,23 @@
                         <label for="filter-apartments">Апартаменты</label>
                     </fieldset>
                 </div>
-                <fieldset class="filters__price">
+                <fieldset class="filters__slider slider">
                     <legend>Стоимость в сутки (Р):</legend>
-                    <div>
-                        <input type="text" placeholder="ОТ 0">
-                        <input type="text" placeholder="ДО 3000">
+                    <div class="slider__price-controls">
+                        <label class="slider__min-price">от <input type="text" name="min-price" value="0"></label>
+                        
+                        <label class="slider__max-price">до <input name="max-price" type="text" value="3000"></label>
+                        
                     </div>
-                    <div>
-                        <input type="range" class="slider">
+                    <div class="slider__range-controls">
+                        <div class="slider__scale">
+                            <div class="slider__bar"></div>
+                            <div class="slider__toggle slider__toggle--min"></div>
+                            <div class="slider__toggle slider__toggle--max"></div>
+
+                        </div>
                     </div>
-                    <button type="submit">Показать</button>
+                    <button class="filters__submit-btn" type="submit">Показать</button>
                 </fieldset>
             </form>
         </section>

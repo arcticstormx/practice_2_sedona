@@ -90,8 +90,7 @@ body {
 .site-nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    flex-grow: 1;
+    flex-grow: 0;
 
     margin: 0;
     padding: 0;
@@ -109,17 +108,37 @@ body {
     color: #000000;
 }
 
-.nav-logo {
-    width: 138px;
-    height: 70px;
+.site-nav .active-page {
+    color: #766357;
+}
+
+.site-nav-firsthalf li:first-of-type {
+    padding-right: 145px;
+}
+
+.site-nav-secondhalf li:last-of-type {
+    padding-left: 160px;
 }
 
 .nav-logo__container {
+    position: relative;
+}
+
+.nav-logo__container::before {
     position: absolute;
     content: "";
-    top: 0;
-    left: 531px;
+
+
+    width: 138px;
+    height: 70px;
+
+    top: -22px;
+    left: -69px;
+
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
 }
+
 
 /*классы страницы index*/
 
@@ -384,7 +403,8 @@ body {
     font-weight: 700;
 }
 
-.filters label {
+.filters__utilities label,
+.filters__apartments label {
     margin-bottom: 23px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -440,6 +460,11 @@ body {
     display: flex;
 }
 
+.filters__slider {
+    margin: 0;
+    padding: 0;
+}
+
 .filters__utilities {
     margin: 0;
     padding: 0;
@@ -461,16 +486,56 @@ body {
     flex-direction: column;
 }
 
-.filters__price {
-    margin: 0;
-    padding: 0;
+.filters__slider {
     display: flex;
     flex-direction: column;
 }
 
-.hotels {
+.slider legend {
+    margin-bottom: 15px;
+}
+
+.slider__price-controls {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    height: 36px;
+
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+}
+
+.slider__min-price {
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+}
+
+.slider__max-price {
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+}
+
+/*.slider__price-min {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+
+    border-right: 2px solid #ffffff;
+}*/
+
+.slider__range-controls {
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 .sorting {
@@ -524,6 +589,11 @@ body {
 .sorting__option--active {
     color: #81b3d2;
     border: none;
+}
+
+.hotels {
+    display: flex;
+    flex-direction: column;
 }
 
 .hotels-list {
