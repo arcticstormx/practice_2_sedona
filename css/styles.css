@@ -451,10 +451,6 @@ body {
     background-repeat: no-repeat;
 }
 
-.filters input {
-    display: none;
-}
-
 
 .filters .filters__container {
     display: flex;
@@ -482,6 +478,7 @@ body {
 .filters__apartments {
     margin-left: 112px;
     padding: 0;
+
     display: flex;
     flex-direction: column;
 }
@@ -491,46 +488,78 @@ body {
     flex-direction: column;
 }
 
+.slider {
+    width: 318px;
+}
+
 .slider legend {
     margin-bottom: 15px;
 }
 
 .slider__price-controls {
+    position: relative;
+
     display: flex;
     flex-direction: row;
+    align-items: center;
     height: 36px;
 
     border: 2px solid #ffffff;
     border-radius: 2px;
 }
 
+.slider__price-controls::before {
+    content: "";
+    position: absolute;
+
+    top: 5px;
+    left: 156px;
+
+    width: 2px;
+    height: 22px;
+
+    background-color: #ffffff;
+}
+
+.slider input {
+    background: none;
+    border: none;
+
+    color: inherit;
+    font: inherit;
+}
+
+.slider input:focus {
+    outline: none;
+}
+
+.slider input::placeholder {
+    color: #ffffff;
+}
+
+.slider__min-price,
+.slider__max-price {
+    text-align: center;
+    cursor: pointer;
+}
+
 .slider__min-price {
     margin: 0;
-    padding: 0;
+    padding-left: 65px;
+}
 
-    text-align: center;
+.slider__min-price input {
+    width: 72px;
 }
 
 .slider__max-price {
     margin: 0;
-    padding: 0;
-
-    text-align: center;
+    padding-left: 53px;
 }
 
-/*.slider__price-min {
-    margin-top: 5px;
-    margin-bottom: 5px;
-
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-    font-size: 14px;
-    line-height: 14px;
-    font-weight: 400;
-
-    border-right: 2px solid #ffffff;
-}*/
+.slider__max-price input {
+    width: 80px;
+}
 
 .slider__range-controls {
     margin: 0;
