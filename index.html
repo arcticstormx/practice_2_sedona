@@ -104,7 +104,7 @@
                     Укажите предполагаемые даты поездки,</br>
                     и мы покажем вам лучшие предложения гостиниц в седоне
                 </p>
-                <button class="search-hotel-btn">Поиск гостиницы в Седоне</button>
+                <button class="contacts__modal-open" type="button">Поиск гостиницы в Седоне</button>
             </div>
             <div class="map-item"></div>
         </section>
@@ -154,7 +154,7 @@
             </a>
         </div>
     </footer>
-    <section class="modal">
+    <section class="modal modal-map">
         <h3 class="visually-hidden modal__header">ПОИСК ГОСТИНИЦЫ В седоне</h3>
         <div class="modal__form-container">
             <form class="modal__form" action="#" method="get">
@@ -228,6 +228,23 @@
             </form>
         </div>
     </section>
+
+    <script type="text/javascript">
+        var link = document.querySelector(".contacts__modal-open");
+
+        var popup = document.querySelector(".modal-map");
+        var close = popup.querySelector(".modal-close");
+
+        var form = popup.querySelector("form");
+        var arrival = popup.querySelector("[name=arrival-date]");
+
+        link.addEventListener("click", function(evt) 
+        {
+            evt.preventDefault();
+            popup.classList.toggle("modal-show");
+            arrival.focus();
+        });
+    </script>
 </body>
 
 </html>

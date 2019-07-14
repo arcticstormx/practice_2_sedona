@@ -30,7 +30,7 @@
                 <div class="filters__container">
                     <fieldset class="filters__utilities">
                         <legend>Инфраструктура:</legend>
-                        <input type="checkbox" class="visually-hidden" id="filter-pool" name="utilities" value="swimming_pool">
+                        <input type="checkbox" class="visually-hidden" id="filter-pool" name="utilities" value="swimming_pool" checked>
                         <label for="filter-pool">Бассейн</label>
                         <input type="checkbox" class="visually-hidden" id="filter-parking" name="utilities" value="parking">
                         <label for="filter-parking">Парковка</label>
@@ -39,11 +39,11 @@
                     </fieldset>
                     <fieldset class="filters__apartments">
                         <legend>Тип жилья:</legend>
-                        <input type="checkbox" class="visually-hidden" id="filter-hotel" name="apartments[]" value="hotel">
+                        <input type="checkbox" class="visually-hidden" id="filter-hotel" name="apartments[]" value="hotel" checked>
                         <label for="filter-hotel">Гостиница</label>
-                        <input type="checkbox" class="visually-hidden" id="filter-motel" name="apartments[]" value="motel">
+                        <input type="checkbox" class="visually-hidden" id="filter-motel" name="apartments[]" value="motel" checked>
                         <label for="filter-motel">Мотель</label>
-                        <input type="checkbox" class="visually-hidden" id="filter-apartments" name="apartments[]" value="apartments">
+                        <input type="checkbox" class="visually-hidden" id="filter-apartments" name="apartments[]" value="apartments" checked>
                         <label for="filter-apartments">Апартаменты</label>
                     </fieldset>
                 </div>
@@ -64,7 +64,7 @@
                             <div class="slider__toggle slider__toggle--max"></div>
                         </div>
                     </div>
-                    <button class="submit-btn" type="submit">Показать</button>
+                    <button class="filters__submit-btn" type="submit">Показать</button>
                 </fieldset>
             </form>
         </section>
