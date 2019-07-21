@@ -1173,6 +1173,11 @@ body {
     margin-right: 27px;
 }
 
+#arrival-date,
+#departure-date {
+    text-transform: uppercase;
+}
+
 .modal__input {
     width: 346px;
     height: 38px;
@@ -1233,13 +1238,22 @@ body {
     background: #f2f2f2;
 }
 
-.modal__count-self {
+.modal__count-adults,
+.modal__count-children {
     position: relative;
     display: flex;
     flex-grow: 1;
 
-    justify-content: center;
-    align-items: center;
+    width: 38px;
+
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+
+    text-align: center;
+    vertical-align: middle;
+
+    border: none;
 }
 
 .modal__count-btn {
