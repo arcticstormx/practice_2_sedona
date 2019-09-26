@@ -6,6 +6,10 @@
     <title>Главная</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="scripts/jquery-ui-1.12.1.custom/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="scripts/datepicker-ru.js"></script>
 </head>
 
 <body class="index-body">
@@ -160,7 +164,7 @@
             <form class="modal__form" action="#" method="get">
                 <div class="modal__input-label-container">
                     <label for="arrival-date" class="modal__label">Дата заезда:</label>
-                    <input type="text" class="modal__input" id="arrival-date" name="arrival-date">
+                    <input type="text" class="modal__input" id="arrival-date" name="arrival-date" autocomplete="off">
                     <svg version="1.1" class="modal__calendar-icon" x="0px" y="0px" width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
                         <g id="calendar_1_">
                             <path d="M19.251,2.025h-2.845V0.648c0-0.381-0.294-0.689-0.656-0.689c-0.363,0-0.656,0.308-0.656,0.689v1.377h-3.938V0.648
@@ -184,7 +188,7 @@
                 </div>
                 <div class="modal__input-label-container">
                     <label for="departure-date" class="modal__label">Дата выезда:</label>
-                    <input type="text" class="modal__input" id="departure-date" name="departure-date">
+                    <input type="text" class="modal__input" id="departure-date" name="departure-date" autocomplete="off">
                     <svg version="1.1" class="modal__calendar-icon" x="0px" y="0px" width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
                         <g id="calendar_1_">
                             <path d="M19.251,2.025h-2.845V0.648c0-0.381-0.294-0.689-0.656-0.689c-0.363,0-0.656,0.308-0.656,0.689v1.377h-3.938V0.648
@@ -210,17 +214,17 @@
                     <div class="modal__count-container">
                         <span class="modal__label modal__label--adults">Взрослые:</span>
                         <div class="modal__count-input-container">
-                            <button type="button" class="modal__count-btn modal__count-btn--decrease"></button>
-                            <span class="modal__count-self">2</span>
-                            <button type="button" class="modal__count-btn modal__count-btn--increase"></button>
+                            <button type="button" class="modal__count-btn modal__count-btn--decrease decrement-adults"></button>
+                            <input type="text" class="modal__count-adults" value="2" readonly></input>
+                            <button type="button" class="modal__count-btn modal__count-btn--increase increment-adults"></button>
                         </div>
                     </div class="modal__count-container">
                     <div class="modal__count-container">
                         <span class="modal__label modal__label--children">Дети:</span>
                         <div class="modal__count-input-container">
-                            <button type="button" class="modal__count-btn modal__count-btn--decrease"></button>
-                            <span class="modal__count-self">0</span>
-                            <button type="button" class="modal__count-btn modal__count-btn--increase"></button>
+                            <button type="button" class="modal__count-btn modal__count-btn--decrease decrement-children"></button>
+                            <input type="text" class="modal__count-children" value="0" readonly></input>
+                            <button type="button" class="modal__count-btn modal__count-btn--increase increment-children"></button>
                         </div>
                     </div>
                 </div>
@@ -244,6 +248,56 @@
             popup.classList.toggle("modal-show");
             arrival.focus();
         });
+    </script>
+    <script>
+      $.datepicker.setDefaults($.datepicker.regional[ "ru" ]);
+      $.datepicker.setDefaults({dateFormat: "d MM yy"});
+      $( function() {
+        $("#arrival-date").datepicker();
+      } );
+      $( function() {
+        $("#departure-date").datepicker();
+      } );
+    </script>
+    <script>
+      var childrenCount = document.querySelector(".modal__count-children");
+      var adultsCount = document.querySelector(".modal__count-adults");
+
+      var childrenMinus = document.querySelector(".decrement-children");
+      var childrenPlus = document.querySelector(".increment-children");
+
+      var adultsMinus = document.querySelector(".decrement-adults");
+      var adultsPlus = document.querySelector(".increment-adults");
+
+      adultsPlus.addEventListener("click", function(evt)
+      {
+        evt.preventDefault();
+        adultsCount.value = +adultsCount.value + 1;
+      });
+
+      adultsMinus.addEventListener("click", function(evt)
+      {
+        evt.preventDefault();
+        if (adultsCount.value > 0) {
+          adultsCount.value = +adultsCount.value - 1;
+          }
+      });
+
+      childrenPlus.addEventListener("click", function(evt)
+      {
+        evt.preventDefault();
+        childrenCount.value = +childrenCount.value + 1;
+      });
+
+      childrenMinus.addEventListener("click", function(evt)
+      {
+        evt.preventDefault();
+        if (childrenCount.value > 0) {
+          childrenCount.value = +childrenCount.value - 1;
+          }
+      });
+
+
     </script>
 </body>
 

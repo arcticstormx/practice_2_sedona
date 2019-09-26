@@ -28,7 +28,7 @@ body {
     width: 1200px;
 
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
@@ -151,7 +151,7 @@ body {
     position: relative;
 }
 
-.index-main {    
+.index-main {
     text-transform: uppercase;
     font-weight: 400;
 }
@@ -578,7 +578,7 @@ body {
 
 .slider__price-controls {
     position: relative;
-    
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -639,7 +639,7 @@ body {
 
 .slider__max-price {
     margin: 0;
-    
+
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 53px;
@@ -1173,6 +1173,11 @@ body {
     margin-right: 27px;
 }
 
+#arrival-date,
+#departure-date {
+    text-transform: uppercase;
+}
+
 .modal__input {
     width: 346px;
     height: 38px;
@@ -1233,13 +1238,22 @@ body {
     background: #f2f2f2;
 }
 
-.modal__count-self {
+.modal__count-adults,
+.modal__count-children {
     position: relative;
     display: flex;
     flex-grow: 1;
 
-    justify-content: center;
-    align-items: center;
+    width: 38px;
+
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+
+    text-align: center;
+    vertical-align: middle;
+
+    border: none;
 }
 
 .modal__count-btn {
